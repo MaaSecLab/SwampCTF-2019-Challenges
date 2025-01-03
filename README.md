@@ -25,7 +25,7 @@
 | 8015       | 4096                    | crypto   | 2                | medium               | Blas <v0ldemort>        |
 | 8016       | Communique              | crypto   | 3                | easy                 | Blas <v0ldemort>        |
 | 8017       | We Three Keys           | crypto   | 4                | medium               | Owen <noopnoop>         |
-| 8017       | DataVault*              | web      | 3                | trivial              | Andrew K. <andrewjkerr> |
+| 8018       | DataVault*              | web      | 3                | trivial              | Andrew K. <andrewjkerr> |
 | 8019       | Brokerboard*            | web      | 4                | trivial              | Andrew K. <andrewjkerr> |
 | 8020       | Multi-Owner Contract*   | smart    | 1                | trivial              | Ale <Janbro>            |
 | 8021       | Hash Slinging Slasher   | smart    | 2                | easy                 | Ale <Janbro>            |

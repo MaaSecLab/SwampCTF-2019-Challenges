@@ -8,9 +8,11 @@ import time
 import re
 from subprocess import Popen, PIPE, STDOUT
 from collections import OrderedDict
+from math import floor
 
 # get the binary build for a newish ffmpeg (needed for some video filtering)
-FFMPEG = "./ffmpeg-git-20190320-amd64-static/ffmpeg"
+# FFMPEG = "./ffmpeg-git-20190320-amd64-static/ffmpeg"
+FFMPEG = "ffmpeg.exe"
 
 def tots(t):
     timestamp = "%02d:%02d:%02d.00" % (t / 3600, t/60 % 60, t % 60)
@@ -57,7 +59,9 @@ def main():
         bundles += [[i, doc_input[i*4:i*4+4]]]
 
     start = time.time()
-    jobs = multiprocessing.cpu_count() - 1
+    jobs = max(1, floor(multiprocessing.cpu_count()/2) - 1)
+
+    print(f"Using {jobs} threads.")
 
     print("Encoding NSA training videos using %d threads" % jobs)
     with Pool(processes=jobs) as pool:
@@ -93,11 +97,17 @@ def job(credits):
     total_lines = len(total_credits.split("\n"))
     seconds = int(total_lines*1.3) + 60
 
+    # other_filters = [
+    #     "drawtext='fontsize=22:fontfile=FreeSerif.ttf:fontcolor=white:text='"'%s'"':x=(w-text_w)/2-10:y=h-40:enable=lt(t\\,8)'" % video_name,
+    #     "drawtext='fontsize=15:fontfile=DejaVuSansMono:fontcolor=white:text='"'TOP SECRET//CYBER//NOFORN'"':y=h-line_h:x=-50*t+300'",
+    #     "drawtext='fontsize=20:fontfile=FreeSerif.ttf:line_spacing=5:fontcolor=white:textfile=%s:y=h-20*(t-12):x=10'" % (combined_credit_file),
+    #     "drawtext='fontsize=22:fontfile=FreeSerif.ttf:fontcolor=white:text='"'%s'"':x=(w-text_w)/2-10:y=h-40:enable=lt(t\\,8)'" % video_name,
+    # ]
     other_filters = [
-        "drawtext='fontsize=22:fontfile=FreeSerif.ttf:fontcolor=white:text='"'%s'"':x=(w-text_w)/2-10:y=h-40:enable=lt(t\,8)'" % video_name,
-        "drawtext='fontsize=15:fontfile=DejaVuSansMono:fontcolor=white:text='"'TOP SECRET//CYBER//NOFORN'"':y=h-line_h:x=-50*t+300'",
-        "drawtext='fontsize=20:fontfile=FreeSerif.ttf:line_spacing=5:fontcolor=white:textfile=%s:y=h-20*(t-12):x=10'" % (combined_credit_file),
-        "drawtext='fontsize=22:fontfile=FreeSerif.ttf:fontcolor=white:text='"'%s'"':x=(w-text_w)/2-10:y=h-40:enable=lt(t\,8)'" % video_name,
+        "drawtext='fontsize=22:fontfile=BreeSerif-Regular.ttf:fontcolor=white:text='"'%s'"':x=(w-text_w)/2-10:y=h-40:enable=lt(t\\,8)'" % video_name,
+        "drawtext='fontsize=15:fontfile=BreeSerif-Regular.ttf:fontcolor=white:text='"'TOP SECRET//CYBER//NOFORN'"':y=h-line_h:x=-50*t+300'",
+        "drawtext='fontsize=20:fontfile=BreeSerif-Regular.ttf:line_spacing=5:fontcolor=white:textfile=%s:y=h-20*(t-12):x=10'" % (combined_credit_file),
+        "drawtext='fontsize=22:fontfile=BreeSerif-Regular.ttf:fontcolor=white:text='"'%s'"':x=(w-text_w)/2-10:y=h-40:enable=lt(t\\,8)'" % video_name,
     ]
 
     all_filters = ",".join(other_filters)
