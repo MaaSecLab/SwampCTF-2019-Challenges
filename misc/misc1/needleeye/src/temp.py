@@ -225,7 +225,7 @@ def generate_image(quad_file: str, imgfile: str) -> None:
 
 #generate_quadtree("/Users/jnw/git/SwampCTF/swctf_misc1/flag1.pbm")
 #generate_image("/Users/jnw/git/SwampCTF/swctf_misc1/quadt.out", "/Users/jnw/git/SwampCTF/swctf_misc1/flag1.pbm")
-generate_image("../quadt.out", "./square-png-30.png")
+generate_image("../res/quadt.out", "./square-png-30.png")
 
 #if __name__ == '__main__':
 #    main()
