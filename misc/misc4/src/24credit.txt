@@ -1,0 +1,2208 @@
+Symbol Table
+
+Symbol Table 1/6
+
+The Symbol Table displays a ta
+bular view of each symbol curr
+ently defined in the program.
+A symbol, also known as a labe
+l, is an association between a
+ name and an address.
+
+Displaying the Symbol Table co
+mponent
+From the menu-bar of a tool, s
+elect Window
+Symbol Table
+From the tool-bar of a tool, c
+lick on the
+button
+
+The columns in the table are:
+Label
+
+Name of symbol.
+
+Location
+
+Address where the symbol is de
+fined.
+
+Type
+
+Symbol type (Function, Externa
+l, Class, etc).
+
+Datatype
+
+Datatype (i.e., byte, float, e
+tc.) applied at symbol address
+.
+
+Namespace Namespace of the sym
+bol; i.e., the scope.
+Source
+
+Indicates where the symbol nam
+e came from.
+
+Reference
+Count
+
+Total number of references mad
+e to this symbol.
+
+You can sort the table on any 
+column by clicking on the colu
+mn header. The column can be s
+orted in ascending or descendi
+ng order.
+The colors for bad references,
+ entry points, dead code, offc
+ut code, function names, local
+ symbols, primary and non-prim
+ary symbols
+correspond to the colors used 
+in the Code Browser. Any chang
+es you make to these colors th
+rough the Code Browser Display
+ options will be
+
+The colors for bad references
+, entry points, dead code, off
+cut code, function names, loca
+l symbols, primary and non-pri
+mary symbols
+correspond to the colors used 
+in the Code Browser. Any chang
+es you make to these colors th
+rough the Code Browser Display
+ options will be
+reflected in the Symbol Table.
+Symbol Table
+
+2/6
+
+Filter Text Field
+The filter text field allows y
+ou to filter the list of symbo
+ls. By default it will do a "C
+ontains" filter, but you can c
+hange that behavior to be "Sta
+rts With",
+"Matches Exactly", or "Regular
+ Expression". See Filter Optio
+ns for more details on the var
+ious filter text strategies.
+The Name Only checkbox allows 
+you to toggle whether to filte
+r on only the name column or a
+ll the columns in the table.
+The filter text field will acc
+ept basic globbing characters 
+such as '*' and '?' within the
+ filter text unless the "Regul
+ar Expression" filter strategy
+ is selected, in
+which case you should use stan
+dard regular expression syntax
+.
+
+Viewing Symbol References
+See Symbol References
+
+Deleting Symbols
+You can use the Symbol Table t
+o delete symbols from the prog
+ram.
+To delete symbols:
+1. Select the symbols in the S
+ymbol Table (hold the <Ctrl> k
+ey down to add to the selectio
+n) to be deleted.
+2. Right-mouse-click and selec
+t "Delete" from the popup menu
+, or click the
+button in the Symbol Table too
+lbar.
+
+Notes on deleting a symbol:
+1. You can only delete a defau
+lt symbol when it has zero (0)
+ references.
+2. If you delete a user-define
+d symbol with references, then
+ a default symbol will automat
+ically be created and assigned
+ those references.
+3. You can delete a non-primar
+y symbol with references, but 
+those references will be reass
+igned to the primary the symbo
+l.
+
+Renaming a Symbol
+You can use the Symbol Table t
+o rename a symbol.
+To rename a symbol:
+1.
+2.
+3.
+4.
+5.
+
+In the Symbol Table, double-cl
+ick in the "Label" field on th
+e row of the symbol to be rena
+med
+The field will become editable
+Enter a new name and press ret
+urn
+The new name for the symbol sh
+ould display in the table and 
+Code Browser
+If the table is being sorted o
+n the "Label" field, then the 
+new name should be sorted into
+ the table and the selection s
+hould move accordingly
+
+Edit External Location
+You can edit the external loca
+tion and associated library de
+tails for any External Data or
+ External Function symbol with
+in the symbol table. Right mou
+se click on
+the symbol table row and choos
+e the Edit External Location
+action from the popup menu (se
+e Symbol Tree - Edit External 
+Location for more discussion o
+n the
+use of the edit dialog).
+
+Making a Selection
+You can make a selection that 
+corresponds to the symbol addr
+esses that are selected in the
+ Symbol Table.
+To make a selection:
+1. Select the symbols in the S
+ymbol Table (hold the <Ctrl> k
+ey down to add to the selectio
+n) to be added to the selectio
+n.
+2. Right-mouse-click and selec
+t "Make Selection" from the po
+pup menu.
+Or, click the
+
+Pinning a Symbol
+
+button in the Symbol Table too
+lbar.
+
+Pinning a Symbol
+Symbol Table 3/6
+
+Code, data, or function labels
+ may be pinned which keeps the
+n from moving to a new address
+ in the event of a memory bloc
+k move or an image base change
+.
+To pin a label:
+1. Select the symbols to be pi
+nned in the Symbol Table (hold
+ the <Ctrl> key down to add to
+ the selection) to be added to
+ the selection.
+2. Right-mouse-click and selec
+t "Set Pinned" from the popup 
+menu.
+To unpin a label:
+1. Select the symbols to be un
+pinned in the Symbol Table (ho
+ld the <Ctrl> key down to add 
+to the selection) to be added 
+to the selection.
+2. Right-mouse-click and selec
+t "Clear Pinned Symbol(s)" fro
+m the popup menu.
+
+Filtering
+The list of displayed symbols 
+is determined by the current s
+ymbol table settings. These se
+ttings can be adjusted by clic
+king the Filter
+button in the toolbar of
+the Symbol Table window or fro
+m the right-mouse popup menu..
+ The displayed symbols will co
+rrespond to the selected check
+boxes in the Symbol Table Filt
+er
+dialog.
+
+Symbol Table Filter Dialog
+
+The Symbol Table Filter dialog
+ consists of three sets of fil
+ters - Symbol Source, Symbol T
+ypes, and miscellaneous Advanc
+ed filters which are not initi
+ally
+shown. The Symbol Types are fu
+rther divided into label symbo
+ls and non-label symbols. This
+ grouping is for informational
+ purposes only. For most situa
+tions,
+only the Source and Type filte
+rs need to be set. This will g
+enerate a query that will incl
+ude all symbols that have one 
+of the selected sources AND ha
+ve one of
+the selected types.
+Symbol Source Filters- this gr
+oup determines which symbols (
+based on how they originated) 
+should be included in the quer
+y. At least one of the source 
+filters
+must be selected.
+User Defined This filter inclu
+des all symbols named by the u
+ser in the query.
+Imported This filter includes 
+all symbols named by some impo
+rted information.
+Analysis This filter includes 
+all symbols created by auto-an
+alysis that do not have defaul
+t names.
+Default (Function) - This filt
+er includes all function symbo
+ls that have default names.
+Default (Labels) This filter i
+ncludesl all non-function symb
+ols that have default names (G
+hidra generally creates defaul
+t-named symbols at any
+address that is referenced by 
+some other location.)
+Symbol Type Filters - This gro
+up of filters determines which
+ types of symbols to include i
+n the query. All symbols in Gh
+idra are one of the following 
+types. At
+least one of these type filter
+s must be selected.
+
+Symbol Type Filters - This gr
+oup of filters determines whic
+h types of symbols to include 
+in the query. All symbols in G
+hidra are one of the following
+ types. At
+least one of these type filter
+s must be selected.
+Instruction Labels - labels at
+ addresses with instructions .
+ Note these do NOT include lab
+els where functions exist.
+Data Labels - labels at addres
+ses with data or external labe
+ls. Note these do NOT include 
+labels where functions exists.
+Functions - labels at addresse
+s where functions have been de
+fined (includes external funct
+ions).
+Namespaces - Namespace name sy
+mbols.
+Classes - C++ class names symb
+ols.
+External Library - External li
+brary name symbols.
+Parameters - Function paramete
+r name symbols.
+Local Variables - Function loc
+al variable name symbols.
+Global Register Variable - glo
+bal register variable name sym
+bols.
+
+Symbol Table 4/6
+
+Use the Select All button to s
+elect all symbol types and the
+ Clear All to de-select all ty
+pes.
+Advanced Symbol Filters - Adva
+nced filters are used to furth
+er refine a query to only incl
+ude symbols that meet various 
+specific criteria. Each of the
+ advanced
+filters only applies to a subs
+et of the symbol types, so to 
+use one of these filters, the 
+appropriate symbol type filter
+ must also be selected. Advanc
+ed filters that do
+not have any of their associat
+ed type filters set, are disab
+led. Advanced filters can be t
+ricky to use because each filt
+er only applies to a subset of
+ the types and has
+no effect on the other selecte
+d types during the query. See 
+the examples below for more in
+formation.
+Externals - Accepts only those
+ symbols which are external.
+Non-Externals - Accepts only t
+hose symbols which are not ext
+ernal.
+Primary Labels - Accepts only 
+labels that are the primary la
+bel at an address. Applies to 
+Labels and Functions.
+Non-Primary Labels - Accepts o
+nly labels that are not the pr
+imary label at an address. App
+lies to Labels and Functions.
+Globals - Accepts the symbol i
+f it is in the global namespac
+e. Applies to Labels, Function
+s, Namespaces, and classes.
+Locals - Accepts the symbol if
+ it is NOT in the global names
+pace. Applies to Labels, Funct
+ions, Namespaces, and classes.
+Register Variables - Accepts f
+unction parameters or local va
+riables that are register base
+d. Applies to Parameters and l
+ocal variables.
+Stack Variables - Accepts func
+tion parameters or local varia
+bles that are stack based. App
+lies to Parameters and local v
+ariables.
+Entry Points - Accepts labels 
+or functions at external entry
+ points. Applies to Labels and
+ Functions.
+Subroutines - Accepts labels t
+hat are "called" by some instr
+uction. (Does not include labe
+ls where functions are defined
+.) Applies to Labels.
+Not In Memory - Accepts labels
+ that are at an address not co
+ntained in memory. Applies to 
+Labels.
+Unreferenced - Accepts labels 
+or functions that have no refe
+rences to them (also known as 
+"dead code"). Applies to Label
+s and functions.
+Offcut Labels - Accepts labels
+ that are at an address that i
+s not the start of an instruct
+ion or data. Applies to Labels
+.
+Advanced Filters affect the qu
+ery using the following algori
+thm. For each symbol that matc
+hes the selected source(s) and
+ symbol type(s):
+1.
+2.
+3.
+
+Find all selected advanced fil
+ters that are appropriate for 
+the symbol's type.
+If no selected advanced filter
+s are appropriate, include the
+ symbol.
+If at least one advanced filte
+r is appropriate, then the sym
+bol is included if at least on
+e of those filters accepts the
+ symbol.
+
+Select the Use Advanced Filter
+s checkbox to see the advanced
+ filters.
+
+The Reset Filters button sets 
+all checkboxes back to their d
+efault states.
+Sample Queries
+
+Sample Queries
+
+Symbol Table 5/6
+Example 1:
+Setup - the following checkbox
+es are selected:
+Symbol Source: User Defined
+Symbol Types: Instruction Labe
+ls, Data Labels, and Function 
+Labels
+Advanced Filter: none
+Result:
+All labels and functions that 
+are "user defined" will be sho
+wn in the symbol table.
+
+Example 2:
+Setup:
+Symbol Source: User Defined, I
+mported, Analysis, and Default
+Symbol Types: Instruction Labe
+ls and Data Labels
+Advanced Filter: Subroutines
+Result:
+All labels that are the start 
+of a subroutine (not including
+ functions) are displayed.
+If you want to see all subrout
+ines including those that have
+ been defined as functions, al
+so select the Functions type f
+ilter.
+
+Example 3:
+Setup:
+Symbol Source: User Defined, I
+mported, Analysis, and Default
+Symbol Types: Functions Labels
+ and Parameters
+Advanced Filter: Stack Variabl
+es.
+Result:
+All functions are displayed
+All parameters that are stack 
+based are displayed. (Register
+ parameters have been filtered
+ out.)
+Note that the advanced filter 
+Stack Variables is applicable 
+only to Parameters, and theref
+ore did not affect the display
+ of functions.
+Example 4:
+Setup:
+Symbol Source: User Defined, I
+mported, Analysis, and Default
+Symbol Types: Instruction Labe
+ls, Data Labels, and Function 
+Labels
+Advanced Filter: Primary Label
+s and Non-primary Labels.
+Result:
+All labels are displayed
+Note that since all labels are
+ either Primary labels or Non-
+primary Labels, selecting both
+ of these advanced filters acc
+omplished nothing.
+The results would have been th
+e same if neither was selected
+.
+
+Provided by: Symbol Table Plug
+in
+Related Topics
+
+Related Topics
+Labels
+Listing Display Options
+
+Symbol Table 6/6
+
+Version Tracking Introduction 
+1/4
+
+Version Tracking Introduction
+Version Tracking refers to the
+ process used by reverse engin
+eers to identify
+matching code or data between 
+different software binaries. O
+ne common use case
+is to version track two differ
+ent versions of the same binar
+y. Alternatively,
+version tracking techniques ca
+n be used to check for the pre
+sence of of a
+particular piece of code withi
+n a given binary of interest.
+Perhaps the most common versio
+n tracking scenario is when yo
+u have a binary
+file that you have previously 
+analyzed, identifying importan
+t areas of interest and
+annotating the code with comme
+nts and labels. Suppose the so
+ftware developer
+releases a newer version of th
+e software including bug fixes
+ and feature
+modifications. Since customers
+ may be using the more up-to-d
+ate version, the
+analyst will probably want to 
+continue evaluation with the n
+ewer version as well.
+However, it can be very time-c
+onsuming to have to initiate t
+he analysis from
+scratch. In order to leverage 
+the existing work, version tra
+cking enables the
+reverse engineer to port comme
+nts and labels into the new co
+ntext.
+Perhaps the second most common
+ version tracking scenario is 
+where you wish to
+check for the presence of exis
+ting code within a given binar
+y. As an example,
+given a small collection of fu
+nctions, say from some library
+ of routines or code
+representing known malware, yo
+u can use version tracking to 
+search for that code
+in a given binary.
+The remainder of this document
+ describes high-level version 
+tracking concepts
+use by Ghidra, followed by lin
+ks to documents that describe 
+how to get started
+version tracking in Ghidra.
+Version Tracking Concepts:
+Session
+Associations
+Matches
+Markup Items
+Correlators
+How to Start
+
+Version Tracking Session
+
+Version Tracking Session
+Version Tracking Introduction 
+2/4
+
+A session is created as a resu
+lt of running one of Ghidra's 
+matching algorithms
+(a.k.a., a correlator) against
+ two binaries. The newly creat
+ed session is stored in
+the Ghidra Project Window. The
+ session records the history o
+f any work done
+within that session (e.g., app
+lying markup). Furthermore, si
+nce changes are
+saved, you may close and reope
+n a session to continue work a
+t a later time.
+Sessions can be updated with n
+ew data by running additional 
+matching
+algorithms at any time.
+
+Version Tracking Associations
+An association is any pairing 
+of information between the two
+ versions of the
+same program, which suggests t
+hat the items correspond with 
+one another in
+some way. An association is ch
+aracterized by a collection of
+ metadata including
+the correlating algorithm that
+ determined the association, a
+ memory address
+reference locating the items i
+n each version, and the type o
+f the items being
+associated (data or function).
+Sometimes a variable or functi
+on in the source program will 
+be associated with
+several variables or functions
+ in the destination program. T
+his happens because
+the version tracking algorithm
+ has found enough evidence to 
+support each
+candidate as a possible corres
+pondence between the two versi
+ons. When this
+happens, we say that they are 
+conflicting associations. It m
+ay be that only one of
+the associations is exactly ri
+ght or that the modularity of 
+the program has
+changed sufficiently and none 
+of the associations is quite r
+ight. Ultimately, the
+analyst has to inspect the act
+ual code to make a determinati
+on about which
+associations represents a vali
+d match.
+Once an association is accepte
+d by the user, any other assoc
+iations which may be
+conflicting because they inclu
+de either the same source or t
+he same destination
+address will become blocked be
+cause the tool only allows one
+-to-one mappings.
+Blocked and conflicting associ
+ations which lead to other inc
+onsistencies can be a
+useful way of identifying vali
+d matches between two differen
+t versions.
+
+Version Tracking Matches
+A match is an association that
+ has been assigned a score. As
+ a correlator finds an
+association it will assign tha
+t association a score, thus cr
+eating a match. The
+matches table contains all mat
+ches discovered by any correla
+tors run within a
+
+association it will assign th
+at association a score, thus c
+reating a match. The
+matches table contains all mat
+ches discovered by any correla
+torsVersion
+run within
+Tracking a
+Introduction 3/4
+given session. Users can use t
+he score to help determine the
+ accuracy of a given
+match, as not all matches crea
+ted by the correlators are cor
+rect.
+When the you determine that a 
+match is valid, then you can a
+ccept the match,
+which will block conflicting, 
+related matches. When you appl
+y markup for a
+given match, then that match i
+s automatically accepted. Fina
+lly, you cannot apply
+markup for a match that has be
+en blocked by another already 
+accepted match.
+Ghidra also has the concept of
+ an Implied Match. If you acce
+pt a function match,
+then Ghidra will generate impl
+ied matches for any functions 
+called by the two
+functions that make up the fun
+ction match.
+
+Version Tracking Markup Items
+During analysis of a program, 
+the analyst will develop a gre
+ater understanding of
+the code and will annotate the
+ disassembly with comments, la
+bels, data type
+information, and parameter and
+ variable names to document th
+e code and to
+make it more readable. Ghidra 
+refers to all of these annotat
+ed details as markup
+items.
+For any given match we can app
+ly its markup items and port t
+hese annotations in
+an appropriate manner so that 
+the labels and comments appear
+ in the
+corresponding locations in the
+ new binary. This is the ultim
+ate purpose of
+version tracking, to retain an
+y progress that has already be
+en made in
+understanding the code and be 
+able to proceed despite any ch
+anges to the original
+binary.
+
+Version Tracking Correlators
+There are many strategies for 
+identifying how different vers
+ions of the a program
+are related to each other. Any
+ scheme or algorithm that dete
+rmines these
+relationships is referred to a
+s a correlator. Correlators ma
+y be based on the
+underlying bytes in a program,
+ the program flow, or any othe
+r aspect of the code
+upon which similarities may be
+ observed. Additional document
+ation is available
+for the specific correlators u
+sed in Ghidra.
+
+How to Start
+
+Version Tracking Introduction
+ 4/4
+
+This list presents a few diffe
+rent useful links for getting 
+started with version
+tracking.
+Workflow
+Version Tracking Tool
+Version Tracking Wizard
+
+Provided by: Version Tracking 
+Plugin
+Related Topics:
+Workflow
+Version Tracking Tool
+Version Tracking Wizard
+Version Tracking Matches Table
+Version Markup Items Table
+
+Headless Analyzer
+
+Headless Analyzer 1/2
+
+The Headless Analyzer is a com
+mand-line-based (non-GUI) vers
+ion of Ghidra that allows user
+s to:
+Create and populate projects
+Perform analysis on imported o
+r existing binaries
+Run non-GUI scripts in a proje
+ct (scripts may be program-dep
+endent or program-independent)
+The Headless Analyzer can be u
+seful when performing repetiti
+ve tasks on a project (i.e., i
+mporting and analyzing a
+directory of files or running 
+a script over all binaries).
+
+Headless Analyzer Options
+The following options are avai
+lable for the Headless Analyze
+r:
+analyzeHeadless [<project_loca
+tion> <project_name>[/<folder_
+path>]] |
+[ghidra://<server>[:<port>]/<r
+epository_name>[/<folder_path>
+]]
+[[-import [<directory>|<file>]
++] | [-process [<project_file>
+]]]
+[-preScript <ScriptName> [<arg
+>]*]
+[-postScript <ScriptName> [<ar
+g>]*]
+[-scriptPath "<path1>[;<path2>
+...]"]
+[-propertiesPath "<path1>[;<pa
+th2>...]"]
+[-scriptlog <path to script lo
+g file>]
+[-log <path to log file>]
+[-overwrite]
+[-recursive]
+[-readOnly]
+[-deleteProject]
+[-noanalysis]
+[-processor <languageID>]
+[-cspec <compilerSpecID>]
+[-analysisTimeoutPerFile <time
+out in seconds>]
+[-keystore <KeystorePath>]
+[-connect [<userID>]]
+[-p]
+[-commit ["<comment>"]]
+[-max-cpu <max cpu cores to us
+e>]
+[-loader <desired loader name>
+]
+
+Accessing the Headless Analyze
+r
+The shell script that launches
+ the Headless Analyzer can be 
+found in your Ghidra installat
+ion's support folder.
+
+ghidra_x.x/support/analyzeHead
+less[.bat]
+Execute the analyzeHeadless sh
+ell script from the command li
+ne with the desired options.
+
+Execute the analyzeHeadless s
+hell script from the command l
+ine with the desired options.
+Headless Analyzer 2/2
+
+Headless Analyzer Documentatio
+n
+The analyzeHeadlessREADME.html
+ file contains details on Head
+less Analyzer usage and option
+s. It is located in your
+Ghidra installation's support 
+folder.
+
+ghidra_x.x/support/analyzeHead
+lessREADME.html
+
+Glossary 1/33
+
+Ghidra Glossary
+A B C D E F G H I J K L M N O 
+P Q R S T U V W
+X Y Z
+
+A
+Action
+An operation the user can perf
+orm in Ghidra. All menu items,
+keybindings, and toolbar butto
+ns are actions.
+
+Address
+A number that identifies a spe
+cific location in memory.
+
+Address Range
+A sequential set of addresses 
+within a single Address Space 
+identified
+by a minimum and maximum addre
+ss.
+
+Address Set
+A collection of Addresses.
+
+Address Space
+
+The set of all legal addresse
+s in memory for a given proces
+sor. The
+nature of each address space i
+s defined by the processor and
+ language
+implementation.
+
+Address Table
+Two or more consecutive addres
+ses in memory.
+
+Analyzer
+A software module that examine
+s and annotates the code in a
+program to help reveal the beh
+avior of that program. Example
+s are
+disassembly, function generati
+on, and stack analysis.
+
+Archive
+See Data Archive.
+See Project Archive.
+
+Assembly Language
+Programming language closely a
+ssociated with an individual
+processor.
+
+Auto Analysis
+Automated way to run all the a
+nalyzers in the appropriate or
+der
+(Example: function creation be
+fore stack analysis).
+
+B
+
+Glossary 2/33
+
+B
+
+Glossary 3/33
+
+Back Reference
+Another name for the Source Ad
+dress in a reference.
+
+Background Task
+Any action that runs in the ba
+ckground allowing the user to 
+perform
+other tasks.
+
+Base Address
+An address from which other ad
+dresses are derived using offs
+ets.
+
+Basic Block
+A sequence of instructions tha
+t has no flow into or out of t
+he
+sequence except for the top an
+d bottom (i.e., no branching).
+
+Basic Block Model
+A Block Model which partitions
+ code into small runs of instr
+uctions
+based on points where instruct
+ion flow changes. Jump, Call, 
+and
+Branch instructions will cause
+ the execution flow to
+change. Arithmetic and store/l
+oad instructions do not break 
+a Basic
+Block because they do not chan
+ge the execution. A label will
+ also
+end one block and begin anothe
+r.
+
+Binary Data
+
+Binary Data
+Bytes that make up a program.
+
+Big Endian
+Byte order for storage such th
+at the high-order byte is at t
+he starting
+address, as shown in the figur
+e below, where increasing memo
+ry
+addresses are going from left 
+to right.
+
+Block Model
+A model which partitions the c
+ode into address ranges based 
+on some
+set of rules. The most obvious
+ model partitions the code int
+o
+subroutines.
+
+Bookmark
+Marker used to designate frequ
+ently-visited or important loc
+ations.
+
+Bookmark Type
+Attaches meaning to a bookmark
+ to indicate its use. Example:
+ Note,
+Info, Analysis, etc.
+
+Browser Field
+
+Glossary 4/33
+
+Browser Field
+Individual program elements di
+splayed by the Code Browser's 
+listing
+window.
+
+Byte Viewer
+A Ghidra component used to dis
+play and edit the bytes in a p
+rogram.
+
+C
+Call Block Model
+See Subroutine Model.
+
+Call Graph
+Graph displaying the relations
+hips between "function calls" 
+in a
+program.
+
+Calling Convention
+Determines how a function rece
+ives arguments and returns res
+ults.
+The available calling conventi
+ons are currently determined b
+y the
+program's language specificati
+on.
+
+Check-In
+The process of contributing an
+d merging changes from a "chec
+kedout" program to the globall
+y shared version of the progra
+m.
+
+Glossary 5/33
+
+out" program to the globally 
+shared version of the program.
+Glossary 6/33
+
+Check-Out
+The process of retrieving the 
+latest version of a shared pro
+gram for
+the purpose of making changes.
+
+Classpath
+Path to search for Ghidra java
+ code.
+
+Clear
+Process of removing informatio
+n from a program (Example:
+symbols, comments, everything,
+ etc).
+
+Code Browser
+A Default Ghidra tool for disp
+laying and working with progra
+m
+listings.
+
+Code Block
+See Basic Block
+
+Code Unit
+An Instruction or Data Item in
+ the listing.
+
+Computed Call
+
+Call instruction whose destin
+ation is dynamically computed.
+
+Conditional Call
+A call instruction that is exe
+cuted conditionally.
+
+Conditional Jump
+A jump instruction that is exe
+cuted conditionally.
+
+Connecting Tools
+Process of coordinating two or
+ more Tools with respect to
+navigation and selection.
+
+Context Sensitive Menu
+Menu that changes depending on
+ cursor location. In other wor
+ds,
+only actions which are appropr
+iate for the type of informati
+on on
+which the cursor resides are a
+vailable from the menu.
+
+Contrib Plugins
+Term used to indicate user-con
+tributed plugins.
+
+Core Plugins
+Term applied to plugins that a
+re supported by the Ghidra tea
+m.
+
+Cycle Group
+
+Glossary 7/33
+
+Cycle Group
+Glossary 8/33
+
+A sequence of data types appli
+ed using the same action repea
+tedly (i.
+e. byte->word->dword->qword).
+
+D
+Data (item)
+Bytes in the program's memory 
+that are not interpreted as
+instructions.
+
+Data Type Archive
+File used to store user-define
+d data types independent of a 
+specific
+program.
+
+Data Component
+A data item inside a structure
+ or array.
+
+Data Type
+A generalization of data which
+ uniquely defines its specific
+ attributes
+such as size, structure and fo
+rmat. Example: byte, float, do
+uble.
+
+Dead Code
+Unreachable code.
+
+Decompiler
+
+Decompiler
+Ghidra module for translating 
+assembly language to C.
+
+Default Ghidra Tool
+1 A pre-configured CodeBrowser
+ Tool that is ready to use whe
+n
+Ghidra is installed.
+2 The tool that has been desig
+nated to run when you double c
+lick
+on a program in the Project Wi
+ndow.
+
+Destination Address
+The "To" address in a referenc
+e "From-To" address pair. An
+address that is referred "To" 
+by an instruction operand or p
+ointer.
+
+Diff
+See Program Diff.
+
+Direct References
+Locations in memory where the 
+bytes make up the address of t
+he
+current location in the browse
+r. See Search for Direct Refer
+ences.
+
+Disassemble
+The process of interpreting pr
+ogram bytes as assembly instru
+ctions.
+
+Disassemble, Restricted
+
+Glossary 9/33
+
+Disassemble, Restricted
+Glossary 10/33
+
+The Ghidra disassembly mode wh
+ere disassembly is restricted 
+to the
+current selection.
+
+Disassemble, Static
+The Ghidra disassembly mode wh
+ere code flows are not followe
+d
+and only bytes at the current 
+location or selection are disa
+ssembled.
+
+DLL
+Abbreviation for Dynamic Link 
+Library. A shared library on a
+Windows platform.
+
+Docking Window Component
+Ghidra user interface componen
+t that can be positioned and s
+ized by
+the user.
+
+DWord
+A 4-byte integer data type.
+
+Dynamic Data Type
+Data types whose structure var
+ies depending on the data byte
+s on
+which they are applied.
+
+E
+
+ELF
+
+Glossary 11/33
+
+Abbreviation for Executable Li
+nking Format. File format used
+ by
+Unix and Linux operating syste
+ms for storing executable prog
+rams.
+
+End of Line (EOL) Comment
+Comments that are displayed to
+ the right of the instruction.
+
+Endian
+Byte ordering. See Big Endian,
+ Little Endian.
+
+Entry Point
+Location in a program where ex
+ecution begins.
+
+Enum Data Type
+Ghidra data type for modeling 
+C-type enums.
+
+Equate
+A string substitution for nume
+ric values appearing in instru
+ction
+operands.
+
+Exporter
+Ghidra module for storing prog
+ram information in various fil
+e
+formats (XML, HTML, ASCII, etc
+).
+
+formats (XML, HTML, ASCII, et
+c).
+Glossary 12/33
+
+External Reference
+A reference from a location in
+ one program to a location in 
+another
+program.
+
+F
+Fall Through Address
+The address of the next sequen
+tial instruction to be execute
+d.
+
+Favorite Data Type
+Ghidra data types that can be 
+accessed via the popup-menu.
+
+Flow
+A.K.A. Instruction Flow or Con
+trol Flow. This the sequence o
+f
+instructions that are executed
+ as a program runs, including 
+branching
+and fall-through.
+
+Flow Graph
+Graph that shows basic instruc
+tion flow.
+
+Forward Refs
+Another name for the Destinati
+on Address in a reference.
+
+Another name for the Destinat
+ion Address in a reference.
+Glossary 13/33
+
+Fragment
+A set of addresses used by the
+ Program Tree to organize code
+.
+
+Front End
+See Ghidra Project Window.
+
+Function
+A program element that is refe
+renced via a call instruction.
+ A
+function has an entry point, a
+ body of instructions, a retur
+n data
+type, and optionally parameter
+s, local variables, and local 
+register
+variables.
+
+Function Signature
+The name, return type, and par
+ameters of a function.
+
+G
+Ghidra
+Ghidra is a java-based framewo
+rk for reverse engineering. It
+provides built-in capabilities
+ for reverse engineering along
+ with
+support for user-provided plug
+ins.
+
+Ghidra File
+
+Any file that is part of a Gh
+idra Project.
+
+Ghidra Program File
+Ghidra files containing inform
+ation about a program.
+
+Ghidra Project
+Ghidra organizes work into pro
+jects. All work is performed i
+n the
+context of a project.
+
+Ghidra Project Window
+The main Ghidra interface for 
+managing program files.
+
+Global Namespace
+Symbols that are not in any sp
+ecific namespace are said to b
+e in the
+"global" namespace. The global
+ namespace is the default name
+space.
+
+gzf
+File extension given to Ghidra
+ program database files that h
+ave been
+"zipped up".
+
+H
+Hex Integer
+A display format in the Byte V
+iewer used to display integer 
+values in
+
+Glossary 14/33
+
+A display format in the Byte 
+Viewer used to display integer
+ values in
+hex.
+
+Hijacked File
+A local program file in a proj
+ect that is "hiding" a shared 
+program
+with the same name. Users cann
+ot access the shared program u
+ntil
+the local file is removed.
+
+Highlight
+A more permanent type of selec
+tion.
+
+History
+List of changes made to labels
+ or comments.
+
+I
+IDA Pro
+A commercially available rever
+se engineering tool.
+
+Importer
+Reads a file (.xml, .dll, .so,
+ etc), and converts its conten
+ts into a
+Ghidra program. Ghidra contain
+s multiple importers (correspo
+nding
+to a specific set of formats).
+ Additional importers can easi
+ly be
+added.
+
+Initialized Block
+
+Glossary 15/33
+
+Initialized Block
+Memory block whose byte values
+ exist as opposed to uninitial
+ized
+blocks whose byte values are u
+nknown.
+
+Instance Settings, Data Type
+Display options for individual
+ data items in Ghidra. For exa
+mple one
+byte can be displayed as decim
+al while another is displayed 
+as
+hex. Also see Data Type Defaul
+t Settings.
+
+Instruction
+An assembly level command such
+ as MOV, JMP, etc.
+
+Intel Hex
+Binary file format specified b
+y Intel generally used for ROM
+ images.
+
+Isolated Entry Model
+A block model defining subrout
+ines. A subroutine block must 
+have
+only one entry point, but may 
+share code with another
+subroutine. The subroutine bod
+y will stop if another is call
+ed or a
+source entry point is encounte
+red.
+
+K
+Key Binding
+Keyboard shortcut for invoking
+ Ghidra functionality.
+
+Glossary 16/33
+
+Keyboard shortcut for invokin
+g Ghidra functionality.
+
+L
+Label
+Symbol name associated with an
+ address in memory.
+
+Language
+The set of instructions associ
+ated with a computer processor
+.
+
+Little Endian
+Byte order for storage such th
+at the low-order byte is at th
+e starting
+address, as shown in the figur
+e below, where the increasing 
+memory
+addresses are going from right
+ to left.
+
+Listing
+The display of the assembly la
+nguage along with comments and
+other markup information.
+
+Local Menu
+
+Glossary 17/33
+
+Local Menu
+A menu that is associated with
+ a specific Ghidra docking win
+dow.
+
+Local Symbol
+A symbol that is local to a pa
+rticular function.
+
+M
+Marker
+Used to indicate a significant
+ location in a program (ex: bo
+okmarks,
+search results, analysis probl
+ems, etc).
+
+Memory
+The component of a program tha
+t contains the raw bytes and t
+he
+addresses where those bytes ar
+e located in the program's add
+ress
+space.
+
+Memory Block
+A contiguous set of bytes anch
+ored at an address. Memory con
+sists
+of one or more Memory Blocks.
+
+Memory Map
+Ghidra GUI that allows the use
+r to view and edit the Memory 
+Blocks
+of a program.
+
+Glossary 18/33
+
+of a program.
+Glossary 19/33
+
+Memory Reference
+A reference from a mnemonic or
+ operand to another address in
+ the
+same program.
+
+Merge
+1. The process of resolving th
+e differences between a checke
+d
+out version with the globally 
+shared version of a program.
+2. The process of retrieving c
+hanges made by others to the
+globally shared version of the
+ program and incorporating
+those changes into your progra
+m without introducing your
+changes into the shared versio
+n (i.e. doing a check-in).
+
+Microcode
+Low-level instructions used to
+ implement a machine instructi
+on.
+
+Mnemonic
+The name of an instruction as 
+it appears in the assembly lis
+ting. (i.e.
+mov, add, jmp, etc.)
+
+Modal
+Dialogs that prevent user inte
+raction with any other Ghidra
+component until the dialog is 
+dismissed.
+
+Motorola Hex
+
+Binary file format specified 
+by Motorola generally used for
+ ROM
+images.
+
+Multiple Entry Model
+A block model defining subrout
+ines. A subroutine block may h
+ave
+multiple entry points and may 
+not overlap code from other
+subroutines.
+
+Multi-User
+Term used when multiple users 
+are working together using sha
+red
+projects and programs.
+
+N
+Name Space
+Defines a scope such that all 
+symbol names within that scope
+ are
+unique.
+
+NE
+Abbreviation for New Executabl
+e. File format used by Windows
+3.1.x operating systems for st
+oring executable programs.
+
+O
+Offcut
+
+Glossary 20/33
+
+A reference into the middle o
+f some instruction or data ite
+m.
+
+Offline
+A situation when a shared Ghid
+ra project cannot connect to t
+he
+server repository.
+
+Operand
+The arguments of an assembly i
+nstruction.
+
+Overlapped Code Model
+A block model defining subrout
+ines. A subroutine block is al
+l code
+accessible from a single entry
+ point and terminates at retur
+ns. Code
+may be shared with other subro
+utines. Each subroutine is def
+ined to
+include the overlapping code a
+s part of its body.
+
+Overlay
+A memory block that occupies t
+he same memory address range a
+s
+some other block.
+
+P
+Partitioned Code Model
+A block model defining subrout
+ines. There is exactly one ent
+ry
+point which may be a call or a
+ny other flow instruction. Eac
+h
+instruction belongs to exactly
+ one subroutine (code is not s
+hared).
+
+Glossary 21/33
+
+PCode
+A form of microcode used by Gh
+idra to model the semantics of
+machine- or assembly-level ins
+tructions.
+
+PE
+Abbreviation for Portable Exec
+utable. File format used by
+Microsoft for storing executab
+le programs.
+
+PKI Authentication
+One of the ways a Ghidra clien
+t can use to identify itself t
+o the
+Ghidra server.
+
+Plate Comment
+Comments that are displayed as
+ a block header above the
+instruction. Plate comments ar
+e automatically surrounded by 
+'*'s.
+
+Plugin
+Software bundles that can opti
+onally be added to Ghidra to a
+dd
+additional functionality.
+
+Plugin Dependency
+The required presence of addit
+ional plugins before a particu
+lar
+plugin can be loaded.
+
+Plugin Table
+
+Glossary 22/33
+
+Plugin Table
+A table view of available Plug
+ins that can be added to a too
+l, as
+shown in the Configure tool di
+alog.
+
+Plugin Tree
+A graphical view of available 
+Plugins that can be added to a
+ tool, as
+shown in the Configure tool di
+alog. The Plugins are grouped 
+by
+functionality and displayed in
+ a tree-like format.
+
+Popup menu
+A context-sensitive menu that 
+appears when you press the rig
+ht
+mouse button.
+
+Post Comment
+Comments that are displayed be
+low the instruction.
+
+Pre Comment
+Comments that are displayed ab
+ove the instruction.
+
+Project Archive
+Project compressed into a sing
+le file for archival or transf
+er purposes.
+
+Program
+Ghidra's representation of an 
+executable binary, its analysi
+s and
+
+Glossary 23/33
+
+Ghidra's representation of an
+ executable binary, its analys
+is and
+annotations.
+
+Program Diff
+Abbreviation for Program Diffe
+rence. It is the process of
+comparing and contrasting prog
+rams in order to determine the
+ir
+similarities and differences.
+
+Primary Label
+The most important label at a 
+location. It is the label that
+ will appear
+by default in all references t
+o that location.
+
+Processor Language
+The assembly language for a pr
+ocessor.
+
+Program Context
+The set of register values at 
+any location in a program.
+
+Program Tree
+The Ghidra GUI module that all
+ows the user to organize the m
+emory
+of a program hierarchically.
+
+Project
+A collection of files (program
+s, etc) and user configuration
+information.
+
+Glossary 24/33
+
+information.
+Glossary 25/33
+
+Project Repository
+A directory on a server that i
+s used by Ghidra's Multi-User 
+module
+to store shared programs.
+
+Property
+A storage mechanism used by pl
+ugins to store information in 
+a
+program at specific addresses.
+
+R
+Read-Only Project
+A project that can be opened f
+or viewing but cannot be chang
+ed (i.e.
+someone else owns this project
+).
+
+Redo
+The process of repeating the l
+ast change that was "undone".
+
+Reference
+A link from the mnemonic or op
+erand of an instruction to a
+destination. The destination i
+s an address, stack variable, 
+or external
+address in another program.
+
+Register
+
+A special-purpose storage loc
+ation in a processor.
+
+Regular Expression
+A character sequence used to m
+atch patterns in strings.
+
+Relocation Table
+Relocations are address locati
+ons that need to be updated to
+ reflect
+where the program is loaded in
+to memory.
+
+Running Tools
+An area on the Ghidra Project 
+Window that displays a list of
+ icons
+which represent Tools currentl
+y in use.
+
+S
+Scalar
+A numeric value in a program.
+
+Scope
+The set of addresses for which
+ a variable is defined.
+
+Screen Element
+The individual listing items t
+hat are displayed by the code 
+browser (i.
+e. address, mnemonic, operand,
+ comment, etc.)
+
+Glossary 26/33
+
+The individual listing items 
+that are displayed by the code
+ browser (i.
+e. address, mnemonic, operand,
+ comment, etc.)
+
+Select Limited Flow
+A Ghidra process that involves
+ following a programs logic
+ but
+excluding all branches (condit
+ional and unconditional). Sele
+ct
+Limited Flow often reveals the
+ high-level algorithm associat
+ed with
+a program. Select Limited Flow
+ is an option in the Code Brow
+ser.
+
+Selection
+A set of addresses that have b
+een chosen by the user in orde
+r to
+perform some operation.
+
+Shared Project
+A project that is associated w
+ith a Ghidra Server. The files
+ in a
+shared project are accessible 
+by other users.
+
+Shared Program
+A program that can be modified
+ by multiple users. Shared pro
+grams
+reside in project repositories
+ on a server rather than in lo
+cal projects
+on the user's workstation.
+
+Simple Block Model
+See Basic Block Model
+
+SLED
+Table-based mechanism for spec
+ifying the syntax and semantic
+s for a
+
+Glossary 27/33
+
+Table-based mechanism for spe
+cifying the syntax and semanti
+cs for a
+processor language.
+
+SLEIGH
+Improved version of SLED. Allo
+ws language-writers to more
+accurately represent all featu
+res of a language.
+
+Source Address
+The "From" address in a refere
+nce "From-To" address pair. An
+address of an instruction or p
+ointer that refers to another 
+address.
+
+Stack Reference
+A reference from a mnemonic or
+ operand to a stack variable.
+
+Stack Variable
+A parameter or local variable 
+definition on the stack frame 
+defined
+by a function.
+
+Static Disassembly
+A version of disassembly where
+ jump and call instructions ar
+e not
+followed.
+
+Status Window
+Area at the bottom of a Ghidra
+ tool used to display messages
+ to the
+user.
+
+Glossary 28/33
+
+user.
+Glossary 29/33
+
+Subroutine Model
+A Block Model which partitions
+ code into address ranges base
+d upon
+a set of rules defined by a sp
+ecific model. Subroutine model
+s
+generally define blocks whose 
+entry point(s) correspond to c
+alled
+locations.
+
+Symbol
+A label that associates a name
+ with an address.
+
+Symbol Table
+A component of program contain
+ing all the label information.
+
+Symbol Tree
+Ghidra GUI module used to disp
+lay symbols in a tree structur
+e.
+
+T
+Tabbed Window
+A window containing two or mor
+e sub-windows that can be sele
+cted
+using tabs.
+
+Terminator
+Any assembly instruction that 
+has no flow (ex: Halt).
+
+Any assembly instruction that
+ has no flow (ex: Halt).
+
+Text Highlighting
+The mode in the Code Browser w
+here all the uses of a given w
+ord
+are highlighted in yellow.
+
+Thunk
+Thunks are functions, called b
+y other functions, usually to 
+perform
+an indirect or external functi
+on call.
+
+Tool Chest
+An area on the Ghidra Project 
+window that displays icons for
+ the
+configured and saved Tools whi
+ch are available to a user.
+
+Tool
+A collection of Plugins that w
+ork together to produce a usef
+ul GUI
+for performing some user level
+ task.
+
+Tool Tip
+A popup description that appea
+rs when the mouse is hovered o
+ver a
+GUI item.
+
+Toolbar (local and global)
+An icon bar used to invoke Ghi
+dra functionality.
+
+Glossary 30/33
+
+U
+
+Glossary 31/33
+
+Unconditional Call
+A call instruction that always
+ executes.
+
+Unconditional Jump
+A jump instruction that always
+ executes.
+
+Undefined Data
+Bytes in the program that have
+ yet to be defined as instruct
+ions or
+data. By default, all bytes in
+ a program begin as Undefined 
+Data.
+
+Undo
+The process of removing the la
+st change made to a program.
+
+Undocked Window
+A Ghidra window that has its o
+wn frame and can be positioned
+ and
+sized independently from other
+ Ghidra windows.
+
+Unresolved External Reference
+An external reference that has
+ not been linked to any progra
+m in the
+project.
+
+User Access List
+The list of users that have ac
+cess to a particular shared re
+pository on
+a Ghidra server. The list cont
+ains usernames and permissions
+.
+
+User Authentication
+The process of verifying the i
+dentity of a client user to th
+e server.
+
+V
+Version Control
+The process of maintaining mul
+tiple versions of a program as
+changes are made.
+
+Version History
+A dialog displaying the histor
+y of changes made to a program
+. Any
+previous version of the progra
+m can be selected for viewing 
+from
+the View History dialog.
+
+Versioned Program
+A program that has been placed
+ under version control in a Gh
+idra
+project in order to maintain a
+ history of all the changes ma
+de to that
+program.
+
+Viewed Project
+A project that has been open a
+s read-only. Projects that you
+ do not
+
+Glossary 32/33
+
+A project that has been open 
+as read-only. Projects that yo
+u do not
+own can only be opened as a Vi
+ewed Project.
+
+W
+Workspace
+A virtual Ghidra desktop for a
+ set of running tools.
+
+X
+XREF
+Abbreviation for cross referen
+ce. CodeBrowser's display of S
+ource
+Addresses.
+
+Glossary 33/33
+
+
