@@ -8,7 +8,7 @@ sheet1 = wb.add_sheet('Sheet 1')
 
 f = open("coord_text.txt", "r")
 
-t = open("ip_addresses.txt","w")
+t = open("ip_addresses.txt", "w")
 
 
 def float_to_hex(f):
