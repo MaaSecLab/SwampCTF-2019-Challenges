@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="serial_killer">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/pwn/pwn7/attachments/serial_killer.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

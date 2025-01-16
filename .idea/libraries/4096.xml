@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="4096">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/crypto/crypto2/src/4096.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
